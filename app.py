@@ -30,13 +30,13 @@ def my_form_post():
 
 
     data = dict(
-        AAPL=data3['Adj. Close'],
+        text=data3['Adj. Close'],
         Date=data3['Date']
     )
 
     tsline = TimeSeries(data,
-        x='Date', y=['AAPL'],
-        color=['AAPL'], dash=['AAPL'],
+        x='Date', y=[text],
+        color=[text], dash=[text],
         title="Timeseries", ylabel='Stock Prices', legend=True)
 
 

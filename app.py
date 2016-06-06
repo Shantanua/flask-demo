@@ -16,9 +16,9 @@ def index():
 def my_form_post():
 
     text = request.form['ticker']
-    splot(text)
-    return render_template('timeseries.html')
-  
+    #splot(text)
+    return render_template('index.html')
+"""  
 def splot(text):
     url1 = 'https://www.quandl.com/api/v3/datasets/WIKI/'
     url2 = text
@@ -47,7 +47,7 @@ def splot(text):
     output_file("timeseries.html")
 
     show(vplot(tsline))
-    
+"""    
 
 if __name__ == '__main__':
   app.run(port=33507)

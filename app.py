@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 from bokeh.charts import TimeSeries, show, output_file, vplot
 from bokeh.embed import components 
+from bokeh.resources import CDN
 
 app = Flask(__name__)
 
@@ -39,7 +40,7 @@ def my_form_post():
         title="Timeseries", ylabel='Stock Prices', legend=True)
 
 
-    script, div = components(tsline)
+    script, div = components(tsline,CDN)
     return render_template('graph.html', script=script, div=div)
    
 

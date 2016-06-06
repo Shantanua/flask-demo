@@ -19,10 +19,11 @@ def my_form_post():
     url3 = '/data.json?start_date=2015-05-01&end_date=2015-05-31'
     
     url = url1 + url2 + url3
-    
+    print url
     r = requests.get(url)
     
     data = r.json()
+    print data
     data2 = data['dataset_data']['data']
     data3 = pd.DataFrame(data2,columns = data['dataset_data']['column_names'])
 
